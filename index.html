@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src="barcodescanner.js"></script>
+<script>
+function leitor()
+{
+cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
+}
+</head>
+<body onLoad="leitor()">
+Teste
+</body>
+</html>
