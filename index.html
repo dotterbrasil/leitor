@@ -6,7 +6,7 @@
 <script>
 function leitor()
 {alert("teste");
-cordova.plugins.barcodeScanner.scan(
+barcodeScanner.scan(
       function (result) {
           alert("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
